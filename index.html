@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>music player</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/all.css">
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<div class="logo">
+				<span>PEN</span> music
+			</div>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contacts</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<div class="left-content">
+				<p class="heading">
+					<span>Enjoy</span> free music <span><i class="fa fa-headphones-alt phones"></i></span>
+				</p>
+				<p class="message">
+					It’s free to use, without any hidden charge, so you better don’t miss it! Another great thing that we must emphasize is that Free Music App has a floating player that will be floating for multitasking or watching videos to avoid interruption of music playback. The app also supports you to stay with the trends in the modern music by personalized recommendations or other option is to create your own playlists and save your songs to the library.
+				</p>
+
+				<div class="left-buttons big-screen">
+					<button class="left-btn download-btn">Download App</button>
+					<button class="left-btn upload-btn">Upload Music</button>
+				</div>
+			</div>
+
+			<div class="right-content">
+				<div class="music-card-container">
+					<div class="card">
+						<div class="play-list-layout hide">
+								<header>
+									<h4>Play List</h4>
+									<span class="cancel"><i class="fa fa-window-close"></i></span> 
+								</header>
+								<div class="playlist-body">
+									<ul id="musicList">
+										<!-- <li><a href="#">song one</a></li>
+										<li><a href="#">song two</a></li>
+										<li><a href="#">song three</a></li>
+										<li><a href="#">song four</a></li>
+										<li><a href="#">song five</a></li>
+										<li><a href="#">song six</a></li>
+										<li><a href="#">song seven</a></li> -->
+									</ul>
+								</div>
+								<div class="playlist-footer">
+									<span>20 songs</span>
+									<span>6 musicians</span>
+								</div>
+							</div>
+						<section class="top-section">
+						<div class="card-top-icons">
+							<span id="downloadBtn">
+								<!-- <a href="./music/jeje.mp3" download><i class="fa fa-download"></i></a> -->
+							</span>
+
+							<span id="search">
+								<input type="text" id="searchField" placeholder="search music or artist" autofocus>
+								<div id="searchIconContainer">
+									<div id="searchIcon">
+										<i class="fas fa-search"></i>
+									</div>
+								</div>
+							</span>
+							
+							
+						</div>
+						<div class="cardImage" >
+							<img id="artistImage" alt="user">
+						</div>
+						<div class="musicInfo">
+							<span class="analize">
+								<canvas id="analizer-bar"></canvas>
+							</span>
+							<div class="musician">
+								Diamond Platnumz
+							</div>
+							<div class="song">
+								Moyo wangu
+							</div>
+							<div class="timer">
+								<span class="current-time" id="currentAudioTime">00:00</span>
+								<span class="musicNo"> <small id="musicNo">33</small>/<small id="musicTotal">79</small></span>
+								<span class="music-length" id="audioLength">00:00</span>
+							</div>
+
+							<input type="range" class="seeker" id="seekBar" min="0" max="100" value="0" step="1" onchange="change_duration()">
+
+							<div class="auto-with-volume">
+								<div class="auto-play">
+									<i class="fa fa-heart"></i> 
+									<span class="sm-text">favorites</span>
+								</div>
+								<div class="volume">
+									<span class="off-mute">
+										<i class="fa fa-volume-up"></i>
+									</span>
+									<span class="on-mute lost">
+										<i class="fa fa-volume-mute"></i>
+									</span>
+									 
+									<input class="vol" id="volumeRange" type="range" min="0" max="100" value="70"> 
+									<span class="sm-text">Volume<span id="vol_status"></span></span>
+								</div>
+							</div>
+
+							<div class="controls">
+								<span class="repeat">
+									<i class="fa fa-retweet"></i>
+								</span>
+								<span class="no-repeat lost">
+									<i class="fa fa-retweet"></i>
+								</span>
+								
+								<span class="prev" onclick="prev_song()">
+									<i class="fa fa-backward"></i>
+								</span>
+								
+								<span class="play-pause play" onclick="play_the_song()">
+								<i class="fa fa-play"></i>
+								</span>
+
+								<span class="play-pause pause lost" onclick="play_the_song()">
+								<i class="fa fa-pause"></i>
+								</span>
+
+								<span class="next" onclick="next_song()">
+									<i class="fa fa-forward"></i>
+								</span>
+								
+								<span class="random">
+									<i class="fa fa-random"></i>
+								</span>
+								
+							</div>
+						</section>
+							<div class="playlist">
+								<button id="viewPlayList">View playlist</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="left-buttons small-screen">
+					<button class="left-btn download-btn">Download App</button>
+					<button class="left-btn upload-btn">Upload Music</button>
+				</div>
+		</main>
+
+		<div class="footer">
+			<span>Pen music &copy; 2020 Created with love by Nelson Lemein</span>
+		</div>
+	</div>
+
+	<!-- <script src="./js/jQuery3.5.1.js"></script> -->
+	<script src="./js/all.js"></script>
+	<script src="./js/index.js"></script>
+	<!-- <script src="./js/main.js"></script> -->
+</body>
+</html>
